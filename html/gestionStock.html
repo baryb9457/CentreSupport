@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeStock</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            overflow: hidden ;
+        }
+        body{
+            display: block;
+            background-color: white;
+            
+            
+            
+        }
+
+        header{
+            margin-top: 2%;
+            display: block;
+
+        }
+        h1{
+            text-align: center;
+            color: auto;
+            outline: 2px orange;
+            outline-style: dashed;
+            
+        }
+        nav{
+            display: flex;
+            margin-top: 15px;
+            position: relative;
+            justify-content: space-around;
+            width: 100%;
+            height: 100px;
+            background-color: teal;
+            align-items: center;
+            z-index: 1;
+        }
+/* pendant */
+         nav:hover{
+            display: flex;
+            margin-top: 15px;
+            position: inherit;
+            justify-content: space-around;
+            width: 100%;
+            height: 100px;
+            align-items: center;
+
+            .a1, .a2, .a3{
+            position: fixed;
+            text-decoration: none;
+            font-size: larger;
+            /* background-color: aliceblue; */
+            border-radius: 20px 5px;
+            width: fit-content;
+            height: auto;
+            color: black;
+        }
+         }
+
+         /* après */
+            nav::after{
+            display: flex;
+            margin-top: 15px;
+            position: inherit;
+            justify-content: space-around;
+            width: 100%;
+            height: 100px;
+            background-color: teal;
+            align-items: center;
+
+            .a1, .a2, .a3{
+            position: relative;
+            text-decoration: none;
+            font-size: larger;
+            /* background-color: aliceblue; */
+            border-radius: 20px 5px;
+            width: fit-content;
+            height: auto;
+            color: black;
+        }
+         }
+         /* lors */
+     nav:hover{
+            display: flex;
+            margin-top: 15px;
+            position: inherit;
+            justify-content: space-around;
+            width: 100%;
+            height: 100px;
+            /* background-color: teal; */
+            align-items: center;
+
+            .a1, .a2, .a3{
+            display: block;
+            position: relative;
+            text-decoration: none;
+            font-size: larger;
+            /* background-color: aliceblue; */
+            border-radius: 20px 5px;
+            width: fit-content;
+            height: auto;
+            color: black;
+        }
+         }
+         .a1, .a2, .a3{
+            display: block;
+            position: relative;
+            text-decoration: 5px solid;
+            text-align: center;
+            border-radius: 100%;
+            outline-offset: 22px;
+           
+            
+
+        }
+        a:hover{
+            background-color: aliceblue;
+            z-index: var(20%);
+            animation: abg 1s linear;
+            animation: bouge 2m linear;
+        }
+        @keyframes abg {
+            10%{
+                backdrop-filter: 20px;
+                opacity: 10%;
+            } 50%{
+            backdrop-filter: 60px;
+
+                backdrop-filter: 50%;
+            } 90%{
+                background-color: 90px;
+
+                opacity:   100%;
+            }
+          
+            
+        } 
+        a:focus{
+            font-size: larger;
+            font-style: italic;
+        }
+
+
+        @keyframes bouge {
+            0%{
+                background-position-x: -100px;
+                transform: translateX(-100px);
+            }100%{
+                background-position-x: 100px;
+                transform: translateX(100px)
+            }
+        }
+        main{
+            display: block;
+            margin-top: 5%;
+
+
+        }
+
+        table{
+            outline: 2px solid orange ;
+            outline-style: groove;
+            /* margin-left: 20%; pas important  */
+            width: 100%;
+            height: 25%;    
+            overflow: hidden;
+        }
+        footer{
+            text-align: center;
+            outline: auto;
+            margin-top: 40%;
+            height: 100%;
+            border-bottom: none;
+            overflow: hidden;
+        }
+        caption{
+            font-style: italic;
+            font-size: 24px;
+            color: auto;
+            background-color: teal;
+        }
+        tr, th, td{
+           outline: 1px solid orange;
+           text-align: start;
+           padding-left: 10px;
+           color: auto;
+           font-size: larger;
+
+        }
+
+       td:hover{
+            background-color: lightgray;
+            text-align: center;
+            color: blue;
+            outline: 1p solid red;
+            
+            
+        }
+       
+    </style>
+</head>
+<body>
+    <header  role="banner">
+        <h1>Produits disponible en Stock</h1>
+        <nav role="navigation">
+            <a class="a1" href="#Centre_Logsitique">Centre Logsitique</a>
+            <a class="a2" href="#support techenique">Support technique</a>
+            <a class="a3" href="#accuiel">Accuiel</a>
+        </nav>
+    </header>
+
+    <main role="main">
+
+         <table>
+        <thead>
+            <caption> Composant stock</caption>
+           
+                <tr >
+                    <th scope="rol" >Produit</th>
+                    <th scope="rol">Réfèrence</th>
+                    <th scope="rol">Emplacement</th>
+                    <th scope="rol">Quantité</th>
+                </tr>
+           
+        </thead>
+        <tbody>
+            <tr>
+                <td>Clavier</td>
+                <td>meni55x</td>
+                <td>A-32</td>
+                <td  id="q0" value="45">45</td>
+                
+            </tr>
+             <tr>
+                <td>PC</td>
+                <td>itel2312h</td>
+                <td>C-2</td>
+                <td id="q1" value="61">61</td>
+                
+            </tr>
+             <tr>
+                <td>Sourie</td>
+                <td>23xhnxc</td>
+                <td>G-02</td>
+                <td id="q2" value="59" >59</td>
+                
+            </tr>
+             <tr>
+                <td>Ecran</td>
+                <td>953N12C</td>
+                <td>T-29</td>
+                <td id="q3" value="89">89</td>
+                
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <th scope="col" colspan="2" style="text-align: start;  background-color: rgb(106, 102, 97); " >Total d'unités</th>
+            <td colspan="2" style="text-align: end; padding-right: 15%; background-color:teal;" id="total"></td>
+        </tfoot>
+         </table>
+    </main>
+
+    <footer> <p> 10-26 &copy; kam@services</p></footer>
+
+    <script>
+        
+        // calcul du total produis
+        let q0 = document.getElementById('q0');
+        let q1 = document.getElementById('q1');
+        let q2 = document.getElementById('q2');
+        let q3 = document.getElementById('q3');
+
+        let total = document.getElementById('total');
+
+        let sommes = Number(q0.textContent) + Number(q1.textContent) + Number(q2.textContent) + Number(q3.textContent);
+        total.textContent = sommes;
+
+        // function toNumber(el) {
+        //     return Number(el.textContent || el.value || 0);
+        // }
+        // let leTous = toNumber(q0) + toNumber(q1) + toNumber(q2) + toNumber(q3);
+        // total.textContent = isNaN(leTous) ?'erreur' : leTous;
+
+
+    </script>
+</body>
+</html>

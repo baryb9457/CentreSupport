@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intranet - GesStock</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 20px; background-color: #f4f7f6; }
+        header, footer { background: #003366; color: white; padding: 15px; text-align: center; }
+        nav ul { list-style: none; padding: 0; display: flex; justify-content: center; gap: 20px; }
+        nav a { color: white; text-decoration: none; }
+        main { background: white; padding: 20px; margin-top: 20px; border-radius: 8px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 15px; }
+        th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+        th { background-color: #f2f2f2; }
+        tfoot { font-weight: bold; background-color: #eef2f7; }
+    </style>
+</head>
+<body>
+
+    <header role="banner">
+        <h1>GesStock - Espace Logistique</h1>
+        <nav role="navigation">
+            <ul>
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#stocks">Stocks</a></li>
+                <li><a href="#contact">Support</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main role="main">
+        <section id="stocks">
+            <h2>État actuel des stocks</h2>
+            <table>
+                <caption>Récapitulatif des composants informatiques en entrepôt</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Référence</th>
+                        <th scope="col">Désignation</th>
+                        <th scope="col">Quantité</th>
+                        <th scope="col">Emplacement</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>CPU-9920</td>
+                        <td>Processeur Hexa-Core 3.8GHz</td>
+                        <td>42</td>
+                        <td>Rayon A-3</td>
+                    </tr>
+                    <tr>
+                        <td>RAM-16GB</td>
+                        <td>Barrette Mémoire DDR4 16Go</td>
+                        <td>128</td>
+                        <td>Rayon B-1</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th scope="row" colspan="2">Total global des unités :</th>
+                        <td colspan="2">170 unités</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+    </main>
+
+    <footer role="contentinfo">
+        <p>&copy; 2026 - BTS SIO SLAM - Tous droits réservés.</p>
+    </footer>
+
+</body>
+</html>
