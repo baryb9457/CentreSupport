@@ -3,25 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CentreDeSupport</title>
+    <title>CentreSupportTech</title>
 
     <style>
         *{
             box-sizing: border-box; margin: 0; }
         body{
             display: block; margin-top: 23px; overflow: hidden;  }
-            header{display: block; padding: 23px; justify-items: center;   background-color: orange; }
+            header{display: block; padding: 23px; justify-items: center;    }
             h1{opacity: 90%; color: rgb(186, 82, 82); }
-            form{display: grid; justify-content: start; position: relative;}
+            form{display: grid; justify-content: start; position: relative; outline-width: 8px; outline-color: lightskyblue; box-shadow: -20px 22px 1px 4px lightskyblue;  outline-style: dotted; border-radius: 20px 0px 5px 12px; animation: mv 2s infinite; }
+            @keyframes mv {
+                from{
+                left: -15px; 
+                box-shadow: -20px 22px 1px 4px orange;
+                outline-color: orange;
+
+                }to{
+                    right: -15px;
+                }
+                
+            }
+            form:hover{
+                animation: none;
+               
+            }
+             form:focus{
+                animation: none;
+               
+            }
+
+           
+              
+            
+
             details{display: block; color: red; font-size: larger; kerning: 5cm;}
+        
+
             p{color: black; font-style: italic;}
             summary{color:black; font-size: larger; }
             input{width: 100%; height: 30px; text-align: start; padding: 4px;}
             textarea{width: 530px; min-height: 200px ;}
-            textarea, input:focus{ border: 2px solid  orange; }
-            textarea, input:focus{ border: 2px solid; border-color: orange; }
+            textarea, input:focus{ border: 2px solid  gray; }
+            textarea, input:focus{ border: 2px solid; border-color: gray; }
             textarea, input:hover{border: none;}
-            textarea, input::after{border-style: dotted; border-color: orange;}
+            textarea, input::after{border-style: double; border-color: gray;}
 
 
     </style>
@@ -30,7 +56,7 @@
 <body>
     <main>
         <header>  <marquee id="mnH" behavior="lazy" direction="left"><h1>Veuilez nous envoyez les informations de votre incidence</h1></marquee>
-            <button id="tiker" type="button" style="border-radius: 20px; color: white; background-color: teal; " >Générez un tiker</button>
+            <button id="tiker" type="button" style="border-radius: 20px 3px; color: red; background-color: lightskyblue; " >Générez un tiker</button>
             <form role="doc-introduction" id="formulaire" action="poste">
                 <label for="email">Email professionnel</label>
                 <input type="email" name="email" id="email"  required placeholder="veuillez saissir votre émail"><br>
